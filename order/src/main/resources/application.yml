@@ -10,8 +10,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          jwk-set-uri: http://localhost:8080/realms/my_realm/protocol/openid-connect/certs
-  jpa:
+          jwk-set-uri: https://8080-acmexii-keycloak-e4sx0hq4jow.ws-us63.gitpod.io/realms/my_realm/protocol/openid-connect/certs
     properties:
       hibernate:
         show_sql: true

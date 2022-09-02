@@ -10,15 +10,17 @@ spring:
     oauth2:
       client:
         provider:
-          my-keycloak-provider:
-            issuer-uri: http://localhost:8080/realms/my_realm
+          keycloak:
+            issuer-uri: https://8080-acmexii-keycloak-e4sx0hq4jow.ws-us63.gitpod.io/realms/my_realm
         registration:
-          keycloak-test-client:
-            provider: my-keycloak-provider
+          keycloak:
+            provider: keycloak
             client-id: spring-gateway-client
-            client-secret: HKFKYP7kb8OMldAgfvnk27FhRPOv8Y7H
+            client-secret: ssdlClaSA8rCqkbAy0TW5YEpjyZ3yWGl
             authorization-grant-type: authorization_code
-            redirect-uri: '{baseUrl}/login/oauth2/code/keycloak'
+            #redirect-uri: https://8080-acmexii-keycloak-e4sx0hq4jow.ws-us63.gitpod.io/login/oauth2/code/keycloak
+            #redirect-uri: https://8080-acmexii-keycloak-e4sx0hq4jow.ws-us63.gitpod.io/login/oauth2/code/spring-gateway-client
+            redirect-uri: https://8088-acmexii-keycloak-e4sx0hq4jow.ws-us63.gitpod.io/login/oauth2/code/spring-gateway-client
             scope: openid
   cloud:
     gateway:
